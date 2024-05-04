@@ -35,7 +35,7 @@ if ($conn->query($sql) === TRUE) {
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
     $mail->Username = 'alvarezmayoralluisantonio@gmail.com';
-    $mail->Password = '';
+    $mail->Password = 'mnemiijiqmfjndpu';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port = 587;
 
@@ -43,7 +43,7 @@ if ($conn->query($sql) === TRUE) {
     $mail->addAddress($email, $username);
 
     $mail->isHTML(true);
-    $mail->Subject = 'Activación de Cuenta';
+    $mail->Subject = 'Activacion de Cuenta';
     $mail->Body = '¡Gracias por registrarte! Por favor, haz clic en el siguiente enlace para activar tu cuenta: <a href="localhost/ABD2024A/pages/activar_cuenta.php?code=' . $activation_code . '">Activar Cuenta</a>';
 
     if ($mail->send()) {

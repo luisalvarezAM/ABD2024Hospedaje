@@ -23,7 +23,7 @@
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
                   $username = $_POST["username"];
-                  $password=md5($_POST["password"]);
+                  $password=md5($_POST['password']);
 
                   //Conectar a la base de datos
                   $connect = new mysqli("localhost", "root", "", "abd2024hospedaje");
@@ -38,8 +38,12 @@
 
                   if ($result->num_rows == 1) {
                     echo '<div class="alert alert-success" role="alert">¡Inicio de sesión exitoso!</div>';
+                    echo 'aqui estoy';
+                    echo '<?= $producto ?>';
                   } else {
-                    echo '<div class="alert alert-danger" role="alert">Usuario o contraseña incorrectos</div>';
+                    echo "La contraseña es: $password";
+                    //echo '<div class="alert alert-danger" role="alert">Usuario o contraseña incorrectos g</div>';
+
                   }
                   $connect->close();
                 }
