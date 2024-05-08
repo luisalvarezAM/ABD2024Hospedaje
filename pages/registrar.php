@@ -37,18 +37,11 @@
                                 </select>
                                 <label for="usertype"> Tipo de usuario</label>
                             </div>
-
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="password" name="password" placeholder="Contraseña">
                                 <label for="password">Contraseña</label>
                             </div>
-                            <div class="form-group">
-                                <label for="regis_date">Fecha de registro:</label>
-                                <input type="date" class="form-control" id="registration_date" name="registration_date" required>
-                            </div>
-                            <div class="form-floating mb-3">
 
-                            </div>
                             <div class="d-grid mb-2">
                                 <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Registrarse</button>
                             </div>

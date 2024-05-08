@@ -22,7 +22,7 @@ $username = $_POST['username'];
 $email = $_POST['email'];
 $usertype = $_POST['usertype'];
 $password =md5($_POST['password']) ;// Encriptar la contraseña con bcrypt
-$registration_date = $_POST['registration_date'];
+$registration_date = ['fecha_actual'];
 
 // Generar código de activación único
 $activation_code = md5(uniqid(rand(), true));
